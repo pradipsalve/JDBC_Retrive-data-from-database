@@ -11,7 +11,7 @@ public class Main {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            //load driver
+                                                            //load driver
         } catch (ClassNotFoundException e) {
             System.out.println(e.getMessage());
         }
@@ -19,9 +19,9 @@ public class Main {
 
 
             try {
-                Connection con= DriverManager.getConnection(url, user, pass); //craeet establish connenction
-                Statement stmt = con.createStatement();                      //crate a statement
-                ResultSet rs =  stmt.executeQuery(query);                   //execute query
+                Connection con= DriverManager.getConnection(url, user, pass);      //craeet establish connenction
+                Statement stmt = con.createStatement();                              //crate a statement
+                ResultSet rs =  stmt.executeQuery(query);                             //execute query
 
                 while(rs.next()){
                     int id = rs.getInt("id");
